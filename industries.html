@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industries - AVIT Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header header-dark" id="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="avit-logo.png" alt="AVIT Pro Logo" class="logo-img">
+                </a>
+            </div>
+
+            <nav class="main-nav" id="mainNav">
+                <button class="mobile-menu-close" id="mobileMenuClose">
+                    <i class="fas fa-times"></i>
+                </button>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-column">
+                                    <h4>Complete AV & IT Solutions</h4>
+                                    <a href="services.html#corporate">Corporate</a>
+                                    <a href="services.html#education">Education</a>
+                                    <a href="services.html#government">Government</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="solutions.html" class="nav-link">Solutions <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu dropdown-menu-wide">
+                            <div class="dropdown-content dropdown-content-wide">
+                                <div class="dropdown-column">
+                                    <h4>Display Solutions</h4>
+                                    <a href="products/ifpd-65.html">Interactive Flat Panel Display</a>
+                                    <a href="products/digital-signage.html">Digital Signage</a>
+                                    <a href="products/led-video-walls.html">Active LED Walls</a>
+                                    <a href="products/kiosks.html">Kiosks</a>
+                                    <a href="products/projectors.html">Projectors</a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Audio Solutions</h4>
+                                    <a href="products/pro-audio.html">Professional Audio Solution</a>
+                                    <a href="products/pa-systems.html">PA Systems &amp; Town Hall</a>
+                                    <a href="products/home-theaters.html">Home Theater</a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Workspace Management</h4>
+                                    <a href="products/displays.html">Displays</a>
+                                    <a href="products/floor-monitor-stands.html">Floor Monitor Stands</a>
+                                    <a href="products/hdmi-cables.html">HDMI Cables</a>
+                                    <a href="products/switchers.html">Switchers</a>
+                                    <a href="products/wifi-routers.html">WiFi Routers</a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Unified Communication Solutions</h4>
+                                    <a href="products/professional-audio.html">Video Conferencing Systems</a>
+                                    <a href="products/collaboration-tools.html">Wireless Collaboration</a>
+                                    <a href="products/microsoft-teams-rooms.html">Microsoft Teams Rooms</a>
+                                    <a href="products/zoom-rooms.html">Zoom Rooms</a>
+                                    <a href="products/room-scheduler.html">Room Scheduler</a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>IT Solutions</h4>
+                                    <a href="products/laptops-desktops.html">Laptops & Desktops</a>
+                                    <a href="products/servers-workstations.html">Servers & Workstations</a>
+                                    <a href="products/network-equipment.html">Networking Solutions</a>
+                                    <a href="products/printers.html">Printers & Copiers</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="industries.html" class="nav-link active">Industries <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-column">
+                                    <a href="#corporate">Corporate</a>
+                                    <a href="#education">Education</a>
+                                    <a href="#government">Government</a>
+                                    <a href="#healthcare">Healthcare</a>
+                                    <a href="#hospitality">Hospitality</a>
+                                    <a href="#retail">Retail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="careers.html" class="nav-link">Careers</a>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="resources.html" class="nav-link">Resources <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-column">
+                                    <a href="resources.html#blog">Blog</a>
+                                    <a href="resources.html#case-studies">Case Studies</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:+919948287502" class="support-link"><i class="fas fa-headset"></i> Support</a>
+                <a href="javascript:void(0)" class="btn-contact" onclick="document.getElementById('contactModal').classList.add('active')">Get in Touch</a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <span class="page-label">Sectors We Serve</span>
+            <h1 class="page-title">Our <span class="highlight">Industries</span></h1>
+            <p class="page-subtitle">Tailored Solutions for Every Sector</p>
+        </div>
+    </section>
+
+    <!-- Corporate - Full Width Hero Carousel -->
+    <section class="industry-gallery-section" id="corporate" data-bg-image style="background-image: url('corporate.jpg');">
+        <div class="industry-gallery-container">
+            <!-- Content Side -->
+            <div class="industry-gallery-content">
+                <span class="industry-tag-new">Corporate</span>
+                <h2>Enterprise <span class="text-gradient">Solutions</span></h2>
+                <p class="industry-intro">Transform your corporate environment with cutting-edge AV and IT solutions that drive productivity, engagement, and seamless collaboration across all spaces.</p>
+
+                <div class="industry-stats-inline">
+                    <div class="stat-inline">
+                        <i class="fas fa-building"></i>
+                        <span>200+ Corporate Clients</span>
+                    </div>
+                    <div class="stat-inline">
+                        <i class="fas fa-handshake"></i>
+                        <span>Trusted Partner</span>
+                    </div>
+                </div>
+
+                <div class="industry-features-new">
+                    <div class="ind-feature">
+                        <i class="fas fa-video"></i>
+                        <span>Video Conferencing</span>
+                    </div>
+                    <div class="ind-feature">
+                        <i class="fas fa-desktop"></i>
+                        <span>Digital Signage</span>
+                    </div>
+                    <div class="ind-feature">
+                        <i class="fas fa-th-large"></i>
+                        <span>Video Walls</span>
+                    </div>
+                    <div class="ind-feature">
+                        <i class="fas fa-microphone"></i>
+                        <span>Audio Systems</span>
+                    </div>
+                </div>
+
+                <div class="industry-zones">
+                    <h4>Spaces We Transform</h4>
+                    <div class="zones-grid">
+                        <div class="zone-card">
+                            <i class="fas fa-users"></i>
+                            <span>Boardrooms</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-door-open"></i>
+                            <span>Lobbies</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-chalkboard"></i>
+                            <span>Training Rooms</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-comments"></i>
+                            <span>Collaboration Spaces</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-broadcast-tower"></i>
+                            <span>Command Centers</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="industry-cta-container">
+                    <a href="solutions.html" class="industry-cta-btn">Explore Solutions <i class="fas fa-arrow-right"></i></a>
+                    <a href="contact.html" class="industry-cta-outline">Get Quote</a>
+                </div>
+            </div>
+
+            <!-- Image Gallery Side -->
+            <div class="industry-image-gallery">
+                <div class="video-wall-container">
+                    <div class="video-wall-carousel" data-autoplay="true" data-interval="4000">
+                        <div class="carousel-track">
+                            <div class="carousel-slide active" data-caption="Executive Boardroom">
+                                <img src="boardroom.jpg" alt="Executive Boardroom">
+                            </div>
+                            <div class="carousel-slide" data-caption="Corporate Video Wall">
+                                <img src="corporate.jpg" alt="Corporate Video Wall">
+                            </div>
+                            <div class="carousel-slide" data-caption="Modern Conference Room">
+                                <img src="meetingrooms.jpg" alt="Modern Conference Room">
+                            </div>
+                            <div class="carousel-slide" data-caption="Training Center">
+                                <img src="training.jpg" alt="Training Center">
+                            </div>
+                            <div class="carousel-slide" data-caption="Digital Lobby Display">
+                                <img src="lobby.jpg" alt="Digital Lobby Display">
+                            </div>
+                        </div>
+                        <button class="carousel-nav prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-nav next"><i class="fas fa-chevron-right"></i></button>
+                        <div class="carousel-dots"></div>
+                    </div>
+                    <div class="led-frame">
+                        <div class="led-corner top-left"></div>
+                        <div class="led-corner top-right"></div>
+                        <div class="led-corner bottom-left"></div>
+                        <div class="led-corner bottom-right"></div>
+                    </div>
+                    <div class="video-wall-caption">
+                        <span class="caption-text">Executive Boardroom</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section class="industry-gallery-section" id="education" data-bg-image style="background-image: url('education.jpg');">
+        <div class="industry-gallery-container">
+            <!-- Content Side -->
+            <div class="industry-gallery-content">
+                <span class="industry-tag-new">Education</span>
+                <h2>Smart Learning <span class="text-gradient">Environments</span></h2>
+                <p class="industry-intro">Revolutionize learning with interactive technology solutions for schools, colleges, universities, and training institutes that inspire students and empower educators.</p>
+
+                <div class="industry-stats-inline">
+                    <div class="stat-inline">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>150+ Institutions</span>
+                    </div>
+                    <div class="stat-inline">
+                        <i class="fas fa-chalkboard"></i>
+                        <span>1000+ Classrooms</span>
+                    </div>
+                </div>
+
+                <div class="industry-features-new">
+                    <div class="ind-feature">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Smart Classrooms</span>
+                    </div>
+                    <div class="ind-feature">
+                        <i class="fas fa-hand-pointer"></i>
+                        <span>Interactive Panels</span>
+                    </div>
+                    <div class="ind-feature">
+                        <i class="fas fa-broadcast-tower"></i>
+                        <span>Lecture Capture</span>
+                    </div>
+                    <div class="ind-feature">
+                        <i class="fas fa-volume-up"></i>
+                        <span>Pro Audio Solutions</span>
+                    </div>
+                </div>
+
+                <div class="industry-zones">
+                    <h4>Institutions We Serve</h4>
+                    <div class="zones-grid">
+                        <div class="zone-card">
+                            <i class="fas fa-school"></i>
+                            <span>K-12 Schools</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-university"></i>
+                            <span>Colleges & Universities</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-flask"></i>
+                            <span>Engineering Institutes</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Management Schools</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-book-reader"></i>
+                            <span>Coaching Centers</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-certificate"></i>
+                            <span>Training Institutes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="services.html#education" class="btn-primary-new">Explore Solutions <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Gallery Side - Single Premium LED Display -->
+            <div class="industry-image-gallery">
+                <!-- LED Video Wall - Full Width Carousel -->
+                <div class="video-wall-container">
+                    <div class="video-wall-carousel" data-autoplay="true" data-interval="4000">
+                        <div class="carousel-track">
+                            <div class="carousel-slide active" data-caption="University Lecture Hall">
+                                <img src="education.jpg" alt="University Lecture Hall">
+                            </div>
+                            <div class="carousel-slide" data-caption="Modern Smart Classroom">
+                                <img src="education1.jpg" alt="Modern Smart Classroom">
+                            </div>
+                            <div class="carousel-slide" data-caption="Conference Auditorium">
+                                <img src="education2.jpg" alt="Conference Auditorium">
+                            </div>
+                            <div class="carousel-slide" data-caption="Campus Learning Center">
+                                <img src="campus.jpg" alt="Campus Learning Center">
+                            </div>
+                            <div class="carousel-slide" data-caption="Digital Training Lab">
+                                <img src="interactive.jpg" alt="Digital Training Lab">
+                            </div>
+                        </div>
+                        <button class="carousel-nav prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-nav next"><i class="fas fa-chevron-right"></i></button>
+                        <div class="carousel-dots">
+                            <button class="carousel-dot active" data-index="0"></button>
+                            <button class="carousel-dot" data-index="1"></button>
+                            <button class="carousel-dot" data-index="2"></button>
+                            <button class="carousel-dot" data-index="3"></button>
+                            <button class="carousel-dot" data-index="4"></button>
+                        </div>
+                    </div>
+                    <div class="video-wall-stand"></div>
+                    <div class="video-wall-badge">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-text">Institutions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Government -->
+    <section class="industry-gallery-section" id="government" data-bg-image style="background-image: url('wall.jpg');">
+        <div class="industry-gallery-container">
+            <!-- Content Side -->
+            <div class="industry-gallery-content">
+                <span class="industry-tag-new">Government</span>
+                <h2>Empowering Digital <span class="text-gradient">Governance</span></h2>
+                <p class="industry-intro">Transforming government operations with secure, mission-critical AV & IT infrastructure that enhances administrative efficiency and citizen services.</p>
+
+                <div class="industry-stats-inline">
+                    <div class="stat-inline">
+                        <i class="fas fa-landmark"></i>
+                        <span>50+ Government Projects</span>
+                    </div>
+                    <div class="stat-inline">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure & Compliant</span>
+                    </div>
+                </div>
+
+                <div class="industry-features-new">
+                    <div class="ind-feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure Systems</span>
+                    </div>
+                    <div class="ind-feature">
+                        <i class="fas fa-sitemap"></i>
+                        <span>Command Centers</span>
+                    </div>
+                    <div class="ind-feature">
+                        <i class="fas fa-landmark"></i>
+                        <span>Public Spaces</span>
+                    </div>
+                    <div class="ind-feature">
+                        <i class="fas fa-satellite-dish"></i>
+                        <span>Remote Connectivity</span>
+                    </div>
+                </div>
+
+                <div class="industry-zones">
+                    <h4>Sectors We Serve</h4>
+                    <div class="zones-grid">
+                        <div class="zone-card">
+                            <i class="fas fa-building-columns"></i>
+                            <span>Central Government</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-flag"></i>
+                            <span>State Secretariats</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-shield"></i>
+                            <span>Defence & Paramilitary</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-industry"></i>
+                            <span>PSUs</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-city"></i>
+                            <span>Municipal Corporations</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-gavel"></i>
+                            <span>Courtrooms</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="services.html#government" class="btn-primary-new">Explore Solutions <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Gallery Side - Single Premium LED Display -->
+            <div class="industry-image-gallery">
+                <!-- LED Video Wall - Full Width Carousel -->
+                <div class="video-wall-container">
+                    <div class="video-wall-carousel" data-autoplay="true" data-interval="4000">
+                        <div class="carousel-track">
+                            <div class="carousel-slide active" data-caption="Command & Control Center">
+                                <img src="wall.jpg" alt="Command & Control Center">
+                            </div>
+                            <div class="carousel-slide" data-caption="Operations Monitoring Room">
+                                <img src="townhall.jpg" alt="Operations Monitoring Room">
+                            </div>
+                            <div class="carousel-slide" data-caption="Government Assembly Hall">
+                                <img src="public.jpg" alt="Government Assembly Hall">
+                            </div>
+                            <div class="carousel-slide" data-caption="Digital Analytics Center">
+                                <img src="saftey.jpg" alt="Digital Analytics Center">
+                            </div>
+                            <div class="carousel-slide" data-caption="Secure Briefing Room">
+                                <img src="town.jpg" alt="Secure Briefing Room">
+                            </div>
+                        </div>
+                        <button class="carousel-nav prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-nav next"><i class="fas fa-chevron-right"></i></button>
+                        <div class="carousel-dots">
+                            <button class="carousel-dot active" data-index="0"></button>
+                            <button class="carousel-dot" data-index="1"></button>
+                            <button class="carousel-dot" data-index="2"></button>
+                            <button class="carousel-dot" data-index="3"></button>
+                            <button class="carousel-dot" data-index="4"></button>
+                        </div>
+                    </div>
+                    <div class="video-wall-stand"></div>
+                    <div class="video-wall-badge">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-text">Govt Projects</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Healthcare -->
+    <section class="industry-gallery-section" id="healthcare" data-bg-image style="background-image: url('hospital.jpg');">
+        <div class="industry-gallery-container">
+            <!-- Content Side -->
+            <div class="industry-gallery-content">
+                <span class="industry-tag-new">Healthcare</span>
+                <h2>Advanced Medical <span class="text-gradient">Solutions</span></h2>
+                <p class="industry-intro">Enhance patient care and operational efficiency with specialized AV solutions for healthcare facilities that improve outcomes and streamline operations.</p>
+
+                <div class="industry-stats-inline">
+                    <div class="stat-inline">
+                        <i class="fas fa-hospital"></i>
+                        <span>75+ Healthcare Facilities</span>
+                    </div>
+                    <div class="stat-inline">
+                        <i class="fas fa-heart"></i>
+                        <span>Patient-Centric Design</span>
+                    </div>
+                </div>
+
+                <div class="industry-features-new">
+                    <div class="ind-feature">
+                        <i class="fas fa-tv"></i>
+                        <span>LED Video Walls</span>
+                    </div>
+                    <div class="ind-feature">
+                        <i class="fas fa-desktop"></i>
+                        <span>Professional Displays</span>
+                    </div>
+                    <div class="ind-feature">
+                        <i class="fas fa-tablet-alt"></i>
+                        <span>Kiosks</span>
+                    </div>
+                    <div class="ind-feature">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>PA Systems</span>
+                    </div>
+                    <div class="ind-feature">
+                        <i class="fas fa-video"></i>
+                        <span>Telemedicine</span>
+                    </div>
+                    <div class="ind-feature">
+                        <i class="fas fa-users"></i>
+                        <span>Collaboration Rooms</span>
+                    </div>
+                </div>
+
+                <div class="industry-zones">
+                    <h4>Spaces We Transform</h4>
+                    <div class="zones-grid">
+                        <div class="zone-card">
+                            <i class="fas fa-door-open"></i>
+                            <span>Reception & Wayfinding</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-user-md"></i>
+                            <span>Consultation Rooms</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-procedures"></i>
+                            <span>Operating Theaters</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-bed"></i>
+                            <span>Patient Rooms</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Training Facilities</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-couch"></i>
+                            <span>Waiting Areas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="solutions.html" class="btn-primary-new">Explore Solutions <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Gallery Side - Single Premium LED Display -->
+            <div class="industry-image-gallery">
+                <!-- LED Video Wall - Full Width Carousel -->
+                <div class="video-wall-container">
+                    <div class="video-wall-carousel" data-autoplay="true" data-interval="4000">
+                        <div class="carousel-track">
+                            <div class="carousel-slide active" data-caption="Hospital Command Center">
+                                <img src="hospital.jpg" alt="Hospital Command Center">
+                            </div>
+                            <div class="carousel-slide" data-caption="Medical Conference Hall">
+                                <img src="pasystems.jpg" alt="Medical Conference Hall">
+                            </div>
+                            <div class="carousel-slide" data-caption="Healthcare Operations Center">
+                                <img src="digital.jpg" alt="Healthcare Operations Center">
+                            </div>
+                            <div class="carousel-slide" data-caption="Medical Training Auditorium">
+                                <img src="professional.jpg" alt="Medical Training Auditorium">
+                            </div>
+                            <div class="carousel-slide" data-caption="Digital Health Dashboard">
+                                <img src="modern.jpg" alt="Digital Health Dashboard">
+                            </div>
+                        </div>
+                        <button class="carousel-nav prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-nav next"><i class="fas fa-chevron-right"></i></button>
+                        <div class="carousel-dots">
+                            <button class="carousel-dot active" data-index="0"></button>
+                            <button class="carousel-dot" data-index="1"></button>
+                            <button class="carousel-dot" data-index="2"></button>
+                            <button class="carousel-dot" data-index="3"></button>
+                            <button class="carousel-dot" data-index="4"></button>
+                        </div>
+                    </div>
+                    <div class="video-wall-stand"></div>
+                    <div class="video-wall-badge">
+                        <span class="stat-number">75+</span>
+                        <span class="stat-text">Healthcare Facilities</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hospitality -->
+    <section class="industry-gallery-section" id="hospitality" data-bg-image style="background-image: url('resort.jpg');">
+        <div class="industry-gallery-container">
+            <!-- Content Side -->
+            <div class="industry-gallery-content">
+                <span class="industry-tag-new">Hospitality</span>
+                <h2>Guest Experience <span class="text-gradient">Excellence</span></h2>
+                <p class="industry-intro">Create memorable guest experiences with immersive AV technology that delivers exceptional service and elevates your property's brand presence.</p>
+
+                <div class="industry-stats-inline">
+                    <div class="stat-inline">
+                        <i class="fas fa-hotel"></i>
+                        <span>60+ Hotels & Resorts</span>
+                    </div>
+                    <div class="stat-inline">
+                        <i class="fas fa-star"></i>
+                        <span>Premium Experiences</span>
+                    </div>
+                </div>
+
+                <div class="industry-features-new">
+                    <div class="ind-feature">
+                        <i class="fas fa-concierge-bell"></i>
+                        <span>Lobby Displays</span>
+                    </div>
+                    <div class="ind-feature">
+                        <i class="fas fa-bed"></i>
+                        <span>In-Room Systems</span>
+                    </div>
+                    <div class="ind-feature">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Event Spaces</span>
+                    </div>
+                    <div class="ind-feature">
+                        <i class="fas fa-utensils"></i>
+                        <span>Restaurant AV</span>
+                    </div>
+                </div>
+
+                <div class="industry-zones">
+                    <h4>Spaces We Transform</h4>
+                    <div class="zones-grid">
+                        <div class="zone-card">
+                            <i class="fas fa-door-open"></i>
+                            <span>Grand Lobby</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-bed"></i>
+                            <span>Guest Rooms</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-glass-cheers"></i>
+                            <span>Banquet Halls</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-utensils"></i>
+                            <span>Restaurants & Bars</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-spa"></i>
+                            <span>Spa & Wellness</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-swimming-pool"></i>
+                            <span>Pool & Outdoor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="solutions.html" class="btn-primary-new">Explore Solutions <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Gallery Side - Single Premium LED Display -->
+            <div class="industry-image-gallery">
+                <!-- LED Video Wall - Full Width Carousel -->
+                <div class="video-wall-container">
+                    <div class="video-wall-carousel" data-autoplay="true" data-interval="4000">
+                        <div class="carousel-track">
+                            <div class="carousel-slide active" data-caption="Grand Hotel Lobby">
+                                <img src="lobby.jpg" alt="Grand Hotel Lobby">
+                            </div>
+                            <div class="carousel-slide" data-caption="Luxury Resort Atrium">
+                                <img src="resort.jpg" alt="Luxury Resort Atrium">
+                            </div>
+                            <div class="carousel-slide" data-caption="Grand Ballroom">
+                                <img src="event.jpg" alt="Grand Ballroom">
+                            </div>
+                            <div class="carousel-slide" data-caption="Fine Dining Restaurant">
+                                <img src="restaurant.jpg" alt="Fine Dining Restaurant">
+                            </div>
+                            <div class="carousel-slide" data-caption="Conference Center">
+                                <img src="meeting.jpg" alt="Conference Center">
+                            </div>
+                        </div>
+                        <button class="carousel-nav prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-nav next"><i class="fas fa-chevron-right"></i></button>
+                        <div class="carousel-dots">
+                            <button class="carousel-dot active" data-index="0"></button>
+                            <button class="carousel-dot" data-index="1"></button>
+                            <button class="carousel-dot" data-index="2"></button>
+                            <button class="carousel-dot" data-index="3"></button>
+                            <button class="carousel-dot" data-index="4"></button>
+                        </div>
+                    </div>
+                    <div class="video-wall-stand"></div>
+                    <div class="video-wall-badge">
+                        <span class="stat-number">60+</span>
+                        <span class="stat-text">Hotels & Resorts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Retail -->
+    <section class="industry-gallery-section" id="retail" data-bg-image style="background-image: url('shopping.jpg');">
+        <div class="industry-gallery-container">
+            <!-- Content Side -->
+            <div class="industry-gallery-content">
+                <span class="industry-tag-new">Retail</span>
+                <h2>Engaging Retail <span class="text-gradient">Experiences</span></h2>
+                <p class="industry-intro">Transform your retail space into an immersive shopping destination that captures attention, drives engagement, and boosts sales.</p>
+
+                <div class="industry-stats-inline">
+                    <div class="stat-inline">
+                        <i class="fas fa-store"></i>
+                        <span>100+ Retail Stores</span>
+                    </div>
+                    <div class="stat-inline">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Sales-Driven Design</span>
+                    </div>
+                </div>
+
+                <div class="industry-features-new">
+                    <div class="ind-feature">
+                        <i class="fas fa-tv"></i>
+                        <span>Indoor Video Walls</span>
+                    </div>
+                    <div class="ind-feature">
+                        <i class="fas fa-sun"></i>
+                        <span>Outdoor Video Walls</span>
+                    </div>
+                    <div class="ind-feature">
+                        <i class="fas fa-hand-pointer"></i>
+                        <span>Interactive Kiosks</span>
+                    </div>
+                    <div class="ind-feature">
+                        <i class="fas fa-music"></i>
+                        <span>Ambiance Audio</span>
+                    </div>
+                </div>
+
+                <div class="industry-zones">
+                    <h4>Spaces We Transform</h4>
+                    <div class="zones-grid">
+                        <div class="zone-card">
+                            <i class="fas fa-store-alt"></i>
+                            <span>Storefront Displays</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Shopping Floor</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-tablet-alt"></i>
+                            <span>Product Kiosks</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-tshirt"></i>
+                            <span>Fitting Rooms</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-cash-register"></i>
+                            <span>Checkout Areas</span>
+                        </div>
+                        <div class="zone-card">
+                            <i class="fas fa-warehouse"></i>
+                            <span>Back Office</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="products/displays.html" class="btn-primary-new">Explore Solutions <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Gallery Side - Single Premium LED Display -->
+            <div class="industry-image-gallery">
+                <!-- LED Video Wall - Full Width Carousel -->
+                <div class="video-wall-container">
+                    <div class="video-wall-carousel" data-autoplay="true" data-interval="4000">
+                        <div class="carousel-track">
+                            <div class="carousel-slide active" data-caption="Flagship Store Display">
+                                <img src="shopping.jpg" alt="Flagship Store Display">
+                            </div>
+                            <div class="carousel-slide" data-caption="Shopping Mall Atrium">
+                                <img src="digitalsignage.jpg" alt="Shopping Mall Atrium">
+                            </div>
+                            <div class="carousel-slide" data-caption="Premium Retail Experience">
+                                <img src="signange.png" alt="Premium Retail Experience">
+                            </div>
+                            <div class="carousel-slide" data-caption="Interactive Store Display">
+                                <img src="todaysspecial.jpg" alt="Interactive Store Display">
+                            </div>
+                            <div class="carousel-slide" data-caption="Digital Signage Wall">
+                                <img src="led.png" alt="Digital Signage Wall">
+                            </div>
+                        </div>
+                        <button class="carousel-nav prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-nav next"><i class="fas fa-chevron-right"></i></button>
+                        <div class="carousel-dots">
+                            <button class="carousel-dot active" data-index="0"></button>
+                            <button class="carousel-dot" data-index="1"></button>
+                            <button class="carousel-dot" data-index="2"></button>
+                            <button class="carousel-dot" data-index="3"></button>
+                            <button class="carousel-dot" data-index="4"></button>
+                        </div>
+                    </div>
+                    <div class="video-wall-stand"></div>
+                    <div class="video-wall-badge">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-text">Retail Stores</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <!-- Company Info -->
+                <div class="footer-column footer-about">
+                    <div class="footer-logo">
+                        <img src="avit-logo.png" alt="AVIT Pro Logo" class="footer-logo-img">
+                    </div>
+                    <p class="footer-description">
+                        AVIT is a leading Audio Visual and IT System Integrator, delivering cutting-edge technology solutions for Corporate, Education, and Government sectors since 2021.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/avit-pro" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919948287502" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Display Solutions -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Display Solutions</h4>
+                    <ul class="footer-links">
+                        <li><a href="products/interactive-panel.html">Interactive Displays</a></li>
+                        <li><a href="products/led-video-walls.html">LED Video Walls</a></li>
+                        <li><a href="products/displays.html">Professional Displays</a></li>
+                        <li><a href="products/digital-signage.html">Digital Signage</a></li>
+                        <li><a href="products/kiosks.html">Kiosks</a></li>
+                    </ul>
+                </div>
+
+                <!-- Workspace Solutions -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Workspace Solutions</h4>
+                    <ul class="footer-links">
+                        <li><a href="solutions.html#workspace">Video Conferencing</a></li>
+                        <li><a href="products/professional-audio.html">Audio Systems</a></li>
+                        <li><a href="solutions.html#workspace">AV Accessories</a></li>
+                        <li><a href="solutions.html#workspace">Mounting Solutions</a></li>
+                        <li><a href="solutions.html#printers">Printers & Copiers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support & Contact -->
+                <div class="footer-column footer-support">
+                    <h4 class="footer-title">Support</h4>
+                    <p class="support-text">Need help? Our support team is here for you 24/7</p>
+                    <a href="tel:+919948287502" class="support-portal-btn">
+                        <i class="fas fa-headset"></i> Support Portal
+                    </a>
+                    <div class="footer-contact-info">
+                        <a href="tel:+919948287502" class="footer-phone">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 9948287502</span>
+                        </a>
+                        <a href="mailto:info@avitpro.in" class="footer-email">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@avitpro.in</span>
+                        </a>
+                        <a href="mailto:sales@avitpro.in" class="footer-email">
+                            <i class="fas fa-envelope"></i>
+                            <span>sales@avitpro.in</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 AVIT. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-label">Get in Touch</span>
+                    <h2 class="modal-title">Let's <span class="highlight">Connect</span></h2>
+                    <p class="modal-subtitle">Fill out the form below and we'll get back to you shortly.</p>
+                </div>
+                <form class="modal-form" id="modalContactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company" placeholder="Your Company">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interested In</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="display">Display Solutions</option>
+                            <option value="audio">Audio Solutions</option>
+                            <option value="video-conference">Video Conferencing</option>
+                            <option value="digital-signage">Digital Signage</option>
+                            <option value="workspace">Workspace Management</option>
+                            <option value="printers">Printers & Copiers</option>
+                            <option value="it-networking">IT & Networking Solutions</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your requirements..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit-modal">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+                <div class="modal-contact-info">
+                    <div class="modal-contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+91 9948287502</span>
+                    </div>
+                    <div class="modal-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@avitpro.in</span>
+                    </div>
+                    <div class="modal-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>sales@avitpro.in</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Slide-in Contact Popup -->
+    <div class="contact-popup" id="contactPopup">
+        <div class="contact-popup-header">
+            <div class="contact-popup-header-text">
+                <h3>Need Help?</h3>
+                <p>Let us know how we can assist you</p>
+            </div>
+            <button class="contact-popup-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="contact-popup-body">
+            <form class="contact-popup-form" id="popupContactForm">
+                <div class="popup-form-row">
+                    <div class="popup-form-group">
+                        <label for="popupName">Name *</label>
+                        <input type="text" id="popupName" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="popup-form-group">
+                        <label for="popupEmail">Email *</label>
+                        <input type="email" id="popupEmail" name="email" placeholder="you@example.com" required>
+                    </div>
+                </div>
+                <div class="popup-form-group">
+                    <label for="popupPhone">Phone</label>
+                    <input type="tel" id="popupPhone" name="phone" placeholder="+91 98765 43210">
+                </div>
+                <div class="popup-form-group">
+                    <label for="popupService">Service Interested In</label>
+                    <select id="popupService" name="service">
+                        <option value="">Select a service</option>
+                        <option value="display">Display Solutions</option>
+                        <option value="audio">Audio Solutions</option>
+                        <option value="video-conference">Video Conferencing</option>
+                        <option value="digital-signage">Digital Signage</option>
+                        <option value="workspace">Workspace Management</option>
+                        <option value="printers">Printers &amp; Copiers</option>
+                        <option value="it-networking">IT &amp; Networking Solutions</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="popup-form-group">
+                    <label for="popupMessage">Message *</label>
+                    <textarea id="popupMessage" name="message" placeholder="How can we help?" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit-popup">
+                    <span>Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- LED Video Wall Carousel Script - Fade Transition -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const carousels = document.querySelectorAll('.video-wall-carousel');
+
+        carousels.forEach(carousel => {
+            initCarousel(carousel);
+        });
+
+        function initCarousel(carousel) {
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const prevBtn = carousel.querySelector('.carousel-nav.prev');
+            const nextBtn = carousel.querySelector('.carousel-nav.next');
+            const dots = carousel.querySelectorAll('.carousel-dot');
+
+            const autoplay = carousel.dataset.autoplay === 'true';
+            const interval = parseInt(carousel.dataset.interval) || 4000;
+
+            let currentIndex = 0;
+            let autoplayTimer = null;
+            let isPaused = false;
+
+            function goToSlide(index) {
+                if (index < 0) index = slides.length - 1;
+                if (index >= slides.length) index = 0;
+
+                currentIndex = index;
+
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === currentIndex);
+                });
+
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === currentIndex);
+                });
+            }
+
+            function startAutoplay() {
+                if (!autoplay) return;
+                stopAutoplay();
+                isPaused = false;
+
+                autoplayTimer = setInterval(() => {
+                    if (!isPaused) {
+                        goToSlide(currentIndex + 1);
+                    }
+                }, interval);
+            }
+
+            function stopAutoplay() {
+                if (autoplayTimer) {
+                    clearInterval(autoplayTimer);
+                    autoplayTimer = null;
+                }
+            }
+
+            carousel.addEventListener('mouseenter', () => {
+                isPaused = true;
+            });
+
+            carousel.addEventListener('mouseleave', () => {
+                isPaused = false;
+                startAutoplay();
+            });
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    goToSlide(currentIndex - 1);
+                    startAutoplay();
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    goToSlide(currentIndex + 1);
+                    startAutoplay();
+                });
+            }
+
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => {
+                    goToSlide(i);
+                    startAutoplay();
+                });
+            });
+
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            carousel.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            carousel.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                const diff = touchStartX - touchEndX;
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0) {
+                        goToSlide(currentIndex + 1);
+                    } else {
+                        goToSlide(currentIndex - 1);
+                    }
+                    startAutoplay();
+                }
+            }, { passive: true });
+
+            goToSlide(0);
+            startAutoplay();
+
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    isPaused = true;
+                    stopAutoplay();
+                } else {
+                    startAutoplay();
+                }
+            });
+        }
+    });
+    </script>
+</body>
+</html>

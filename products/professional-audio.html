@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Audio Solutions - AVIT Pro</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../pages.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .audio-fullpage {
+            width: 100%;
+            background: #ffffff;
+            padding: 140px 0 0 0;
+        }
+        .audio-fullpage > img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Addressing Section */
+        .addressing-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            background: #fff;
+            min-height: 500px;
+        }
+
+        .addressing-text {
+            padding: 60px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .addressing-text h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .addressing-text p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .addressing-carousel {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #f8f9fc;
+        }
+
+        .addressing-slider {
+            position: relative;
+            width: 100%;
+            height: 400px;
+        }
+
+        .addressing-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .addressing-slide.active {
+            opacity: 1;
+        }
+
+        .addressing-nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 15px 0 20px;
+        }
+
+        .addressing-prev,
+        .addressing-next {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 2px solid #1a1a2e;
+            background: transparent;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #1a1a2e;
+            transition: all 0.3s ease;
+        }
+
+        .addressing-prev:hover,
+        .addressing-next:hover {
+            background: #1a1a2e;
+            color: #fff;
+        }
+
+        .addressing-counter {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        /* Deployment Carousel */
+        .deployment-carousel-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #f8f9fc;
+            padding: 0 0 10px 0;
+        }
+
+        .deployment-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            padding: 15px 0 5px;
+            text-align: center;
+        }
+
+        .deployment-slider {
+            position: relative;
+            width: 100%;
+        }
+
+        .deployment-slide {
+            width: 100%;
+            display: none;
+        }
+
+        .deployment-slide.active {
+            display: block;
+        }
+
+        .deployment-nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 15px 0 20px;
+        }
+
+        .deployment-prev,
+        .deployment-next {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 2px solid #1a1a2e;
+            background: transparent;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #1a1a2e;
+            transition: all 0.3s ease;
+        }
+
+        .deployment-prev:hover,
+        .deployment-next:hover {
+            background: #1a1a2e;
+            color: #fff;
+        }
+
+        .deployment-counter {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        /* Tile Microphone Section */
+        .tile-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            background: #fff;
+            min-height: 500px;
+        }
+
+        .tile-text {
+            padding: 60px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .tile-text h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .tile-text p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .tile-footnote {
+            font-size: 0.8rem !important;
+            color: #888 !important;
+        }
+
+        .tile-carousel {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #f8f9fc;
+        }
+
+        .tile-slider {
+            position: relative;
+            width: 100%;
+            height: 400px;
+        }
+
+        .tile-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .tile-slide.active {
+            opacity: 1;
+        }
+
+        .tile-nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 15px 0 20px;
+        }
+
+        .tile-prev,
+        .tile-next {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 2px solid #1a1a2e;
+            background: transparent;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #1a1a2e;
+            transition: all 0.3s ease;
+        }
+
+        .tile-prev:hover,
+        .tile-next:hover {
+            background: #1a1a2e;
+            color: #fff;
+        }
+
+        .tile-counter {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        /* Spotlight Section */
+        .spotlight-section {
+            background: #fff;
+            text-align: center;
+            padding: 50px 60px 30px;
+        }
+
+        .spotlight-text h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .spotlight-text p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .spotlight-features {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            padding: 40px 0 10px;
+        }
+
+        .spotlight-feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .feature-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #1a1a2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-icon i {
+            font-size: 36px;
+            color: #fff;
+        }
+
+        .spotlight-feature span {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #1a1a2e;
+            text-align: center;
+            max-width: 140px;
+        }
+
+        .spotlight-video {
+            width: 100%;
+        }
+
+        .spotlight-video video {
+            width: 100%;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .addressing-section {
+                grid-template-columns: 1fr;
+            }
+            .addressing-text {
+                padding: 40px 20px;
+            }
+            .addressing-text h2 {
+                font-size: 1.5rem;
+            }
+            .addressing-slider {
+                height: 300px;
+            }
+            .deployment-title {
+                font-size: 1.2rem;
+            }
+            .tile-section {
+                grid-template-columns: 1fr;
+            }
+            .tile-text {
+                padding: 40px 20px;
+            }
+            .tile-text h2 {
+                font-size: 1.5rem;
+            }
+            .tile-slider {
+                height: 300px;
+            }
+            .spotlight-section {
+                padding: 30px 20px 20px;
+            }
+            .spotlight-text h2 {
+                font-size: 1.5rem;
+            }
+            .spotlight-features {
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+            .feature-icon {
+                width: 70px;
+                height: 70px;
+            }
+            .feature-icon i {
+                font-size: 26px;
+            }
+            .spotlight-feature span {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../avit-logo.png" alt="AVIT Pro Logo" class="logo-img">
+                </a>
+            </div>
+
+            <nav class="main-nav" id="mainNav">
+                <button class="mobile-menu-close" id="mobileMenuClose">
+                    <i class="fas fa-times"></i>
+                </button>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../about.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../services.html" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-column">
+                                    <h4>Complete AV & IT Solutions</h4>
+                                    <a href="../services.html#corporate">Corporate</a>
+                                    <a href="../services.html#education">Education</a>
+                                    <a href="../services.html#government">Government</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../solutions.html" class="nav-link">Solutions <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu dropdown-menu-wide">
+                            <div class="dropdown-content dropdown-content-wide">
+                                <div class="dropdown-column">
+                                    <h4>Display Solutions</h4>
+                                    <a href="ifpd-65.html">Interactive Flat Panel Display</a>
+                                    <a href="digital-signage.html">Digital Signage</a>
+                                    <a href="led-video-walls.html">Active LED Walls</a>
+                                    <a href="kiosks.html">Kiosks</a>
+                                    <a href="projectors.html">Projectors</a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Audio Solutions</h4>
+                                    <a href="pro-audio.html">Professional Audio Solution</a>
+                                    <a href="pa-systems.html">PA Systems &amp; Town Hall</a>
+                                    <a href="home-theaters.html">Home Theater</a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Workspace Management</h4>
+                                    <a href="displays.html">Displays</a>
+                                    <a href="floor-monitor-stands.html">Floor Monitor Stands</a>
+                                    <a href="hdmi-cables.html">HDMI Cables</a>
+                                    <a href="switchers.html">Switchers</a>
+                                    <a href="wifi-routers.html">WiFi Routers</a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Unified Communication Solutions</h4>
+                                    <a href="professional-audio.html">Video Conferencing Systems</a>
+                                    <a href="collaboration-tools.html">Wireless Collaboration</a>
+                                    <a href="microsoft-teams-rooms.html">Microsoft Teams Rooms</a>
+                                    <a href="zoom-rooms.html">Zoom Rooms</a>
+                                    <a href="room-scheduler.html">Room Scheduler</a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>IT Solutions</h4>
+                                    <a href="laptops-desktops.html">Laptops & Desktops</a>
+                                    <a href="servers-workstations.html">Servers & Workstations</a>
+                                    <a href="network-equipment.html">Networking Solutions</a>
+                                    <a href="printers.html">Printers & Copiers</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../industries.html" class="nav-link">Industries <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-column">
+                                    <a href="../industries.html#corporate">Corporate</a>
+                                    <a href="../industries.html#education">Education</a>
+                                    <a href="../industries.html#government">Government</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../careers.html" class="nav-link">Careers</a>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../resources.html" class="nav-link">Resources <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-column">
+                                    <a href="../resources.html#blog">Blog</a>
+                                    <a href="../resources.html#case-studies">Case Studies</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:+919948287502" class="support-link"><i class="fas fa-headset"></i> Support</a>
+                <a href="javascript:void(0)" class="btn-contact" onclick="document.getElementById('contactModal').classList.add('active')">Get in Touch</a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Full Width Professional Audio Images -->
+    <section class="audio-fullpage">
+        <img src="../collabration.jpg" alt="Professional Audio Solutions">
+        <img src="../second.jpg" alt="Professional Display">
+        <img src="../packitall.jpg" alt="Pack It All">
+        <img src="../androidbased.jpg" alt="Android Based">
+        <img src="../HDMIroom.jpg" alt="HDMI Room">
+        <img src="../camera.jpg" alt="Camera">
+        <img src="../modern.jpg" alt="Modern">
+        <img src="../speakerphone.jpg" alt="Professional Speakerphone">
+        <!-- Addressing Section with Image Carousel -->
+        <div class="addressing-section">
+            <div class="addressing-text">
+                <h2>Addressing Comprehensive Meeting Demands</h2>
+                <p>Designed to meet the rigorous demands of modern video conferencing, our omni-directional professional microphone offers exceptional sound capture, high-fidelity audio playback, and advanced noise and reverberation reduction.</p>
+                <p>With cutting-edge audio technology and <strong>intelligent algorithms</strong>, it boasts an <strong>omni-directional microphone array</strong> and <strong>premium full-range speakers</strong>, ensuring crisp and natural voice pickup as <strong>amplification</strong>.</p>
+                <p>Physical controls for muting and adjusting volume are complemented by seamless Bluetooth <strong>connectivity</strong> and integration with leading meeting software. This microphone supports <strong>flexible daisy-chaining</strong> and is easy to deploy, addressing diverse meeting environments.</p>
+            </div>
+            <div class="addressing-carousel">
+                <div class="addressing-slider" id="addressingSlider">
+                    <img src="../image1.jpg" alt="Image 1" class="addressing-slide active">
+                    <img src="../image2.jpg" alt="Image 2" class="addressing-slide">
+                    <img src="../image3.jpg" alt="Image 3" class="addressing-slide">
+                </div>
+                <div class="addressing-nav">
+                    <button class="addressing-prev" id="addressingPrev"><i class="fas fa-chevron-left"></i></button>
+                    <span class="addressing-counter" id="addressingCounter">1 / 1</span>
+                    <button class="addressing-next" id="addressingNext"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <img src="../flush.jpg" alt="Flush">
+        <img src="../powerful.jpg" alt="Powerful">
+        <img src="../16-mic.jpg" alt="16 Mic">
+        <img src="../smartprocessing.jpg" alt="Smart Processing">
+        <img src="../deployment.png" alt="Deployment">
+        <!-- Deployment Carousel Section -->
+        <div class="deployment-carousel-section">
+            <h3 class="deployment-title" id="deploymentTitle">Large conference room</h3>
+            <div class="deployment-slider" id="deploymentSlider">
+                <img src="../deploymentimage1.jpg" alt="Deployment Image 1" class="deployment-slide active" data-title="Large conference room">
+                <img src="../deploymentimage2.jpg" alt="Deployment Image 2" class="deployment-slide" data-title="Extra Large conference room">
+            </div>
+            <div class="deployment-nav">
+                <button class="deployment-prev" id="deploymentPrev"><i class="fas fa-chevron-left"></i></button>
+                <span class="deployment-counter" id="deploymentCounter">0 / 0</span>
+                <button class="deployment-next" id="deploymentNext"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <img src="../TileMicrophone.jpg" alt="Tile Microphone">
+        <!-- Tile Microphone Section with Image Carousel -->
+        <div class="tile-section">
+            <div class="tile-text">
+                <h2>WHY CHOOSE<br>Tile Microphone</h2>
+                <p>With 127 wide-range microphones, the <strong>Tile Microphone</strong> delivers <strong>superior audio coverage</strong> within a 5-meter radius*. Its advanced beamforming technology supports customized pickup zones, allowing precise control over audio capture while reducing unwanted background noise.</p>
+                <p>The system integrates <strong>AI-based sound</strong> optimization to ensure immersive and natural sound quality. With support for Dante protocol, it enables seamless integration with other <strong>Dante-compatible</strong> devices for flexible and scalable deployments.</p>
+            </div>
+            <div class="tile-carousel">
+                <div class="tile-slider" id="tileSlider">
+                    <img src="../tile1.png?v=2" alt="Tile 1" class="tile-slide active">
+                    <img src="../tile3.png?v=2" alt="Tile 3" class="tile-slide">
+                    <img src="../tile2.png?v=2" alt="Tile 2" class="tile-slide">
+                    <img src="../tile4.png?v=2" alt="Tile 4" class="tile-slide">
+                </div>
+                <div class="tile-nav">
+                    <button class="tile-prev" id="tilePrev"><i class="fas fa-chevron-left"></i></button>
+                    <span class="tile-counter" id="tileCounter">0 / 0</span>
+                    <button class="tile-next" id="tileNext"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-- Spotlight Section -->
+        <div class="spotlight-section">
+            <div class="spotlight-text">
+                <h2>SPOTLIGHT ON YOUR VOICE</h2>
+                <p>With customizable pickup zones and acoustic fence, Yealink CM50 targets your voice, eliminates background noise, ensures every word of your presentation is heard with precision, making your speeches unforgettable.</p>
+            </div>
+            <div class="spotlight-features">
+                <div class="spotlight-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                    <span>127 Microphone Units</span>
+                </div>
+                <div class="spotlight-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <span>5m Radius Premium Pick-up</span>
+                </div>
+                <div class="spotlight-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-th-large"></i>
+                    </div>
+                    <span>Priority Zones</span>
+                </div>
+                <div class="spotlight-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-border-all"></i>
+                    </div>
+                    <span>Acoustic Fence</span>
+                </div>
+            </div>
+        </div>
+        <div class="spotlight-video">
+            <video autoplay muted loop playsinline>
+                <source src="https://www.yealink.com/website-service/attachment/product/video/20241121/20241121065511151d706.mp4" type="video/mp4">
+            </video>
+        </div>
+        <img src="../simple.jpg" alt="Simple">
+        <img src="../compact.jpg" alt="Compact">
+        <img src="../amplifiers.png" alt="Amplifiers">
+        <img src="../showanything.jpg" alt="Show Anything - 4K Multi-Touch LCD Screens">
+        <img src="../procore.jpg" alt="Pro Core, Flexibility Secured">
+        <img src="../proview.jpg" alt="Pro View with More Eyes - MeetingBoard Pro Camera System">
+    </section>
+
+    <script src="../script.js"></script>
+    <script>
+        (function() {
+            const slider = document.getElementById('addressingSlider');
+            if (!slider) return;
+            const slides = slider.querySelectorAll('.addressing-slide');
+            const prevBtn = document.getElementById('addressingPrev');
+            const nextBtn = document.getElementById('addressingNext');
+            const counter = document.getElementById('addressingCounter');
+            let current = 0;
+
+            function showSlide(index) {
+                slides.forEach(s => s.classList.remove('active'));
+                current = (index + slides.length) % slides.length;
+                slides[current].classList.add('active');
+                counter.textContent = (current + 1) + ' / ' + slides.length;
+            }
+
+            prevBtn.addEventListener('click', () => showSlide(current - 1));
+            nextBtn.addEventListener('click', () => showSlide(current + 1));
+            showSlide(0);
+        })();
+
+        // Deployment Carousel
+        (function() {
+            const slider = document.getElementById('deploymentSlider');
+            if (!slider) return;
+            const slides = slider.querySelectorAll('.deployment-slide');
+            const prevBtn = document.getElementById('deploymentPrev');
+            const nextBtn = document.getElementById('deploymentNext');
+            const counter = document.getElementById('deploymentCounter');
+            const title = document.getElementById('deploymentTitle');
+            if (slides.length === 0) return;
+            let current = 0;
+
+            function showSlide(index) {
+                slides.forEach(s => s.classList.remove('active'));
+                current = (index + slides.length) % slides.length;
+                slides[current].classList.add('active');
+                counter.textContent = (current + 1) + ' / ' + slides.length;
+                title.textContent = slides[current].getAttribute('data-title');
+            }
+
+            prevBtn.addEventListener('click', () => showSlide(current - 1));
+            nextBtn.addEventListener('click', () => showSlide(current + 1));
+            showSlide(0);
+        })();
+
+        // Tile Microphone Carousel
+        (function() {
+            const slider = document.getElementById('tileSlider');
+            if (!slider) return;
+            const slides = slider.querySelectorAll('.tile-slide');
+            const prevBtn = document.getElementById('tilePrev');
+            const nextBtn = document.getElementById('tileNext');
+            const counter = document.getElementById('tileCounter');
+            if (slides.length === 0) return;
+            let current = 0;
+
+            function showSlide(index) {
+                slides.forEach(s => s.classList.remove('active'));
+                current = (index + slides.length) % slides.length;
+                slides[current].classList.add('active');
+                counter.textContent = (current + 1) + ' / ' + slides.length;
+            }
+
+            prevBtn.addEventListener('click', () => showSlide(current - 1));
+            nextBtn.addEventListener('click', () => showSlide(current + 1));
+            showSlide(0);
+        })();
+    </script>
+</body>
+</html>
