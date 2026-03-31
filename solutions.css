@@ -433,7 +433,7 @@
 .brand-logos-track {
     display: flex;
     gap: 60px;
-    animation: scrollBrands 25s linear infinite;
+    animation: scrollBrands 60s linear infinite;
     width: max-content;
 }
 
@@ -1120,7 +1120,7 @@
 .display-brands-track {
     display: flex;
     gap: 50px;
-    animation: scrollDisplayBrands 30s linear infinite;
+    animation: scrollDisplayBrands 60s linear infinite;
     width: max-content;
     padding: 0 25px;
 }
@@ -1411,7 +1411,7 @@
 .brands-track {
     display: flex;
     gap: 40px;
-    animation: scrollBrands 40s linear infinite;
+    animation: scrollBrands 80s linear infinite;
     width: max-content;
 }
 

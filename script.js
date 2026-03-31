@@ -311,7 +311,7 @@ const MobileMenu = {
         this.navItems.forEach(item => {
             const link = item.querySelector('.nav-link');
             link.addEventListener('click', (e) => {
-                if (window.innerWidth <= 992) {
+                if (window.innerWidth <= 992 && item.classList.contains('has-dropdown')) {
                     e.preventDefault();
                     item.classList.toggle('active');
                 }
